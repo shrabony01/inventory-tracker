@@ -1,3 +1,7 @@
+//created interface 
 export interface DiscountableProduct{
-    ap
+    //method
+    applyDiscount(perccent:number):void;
+    getDicountedPrice():number;
+    
 }

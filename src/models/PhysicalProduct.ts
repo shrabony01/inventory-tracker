@@ -1,14 +1,20 @@
 import { Product } from "./Product.js";
+import { DiscountableProduct } from "../interfaces/DiscountableProduct.js";
 
-export class PhysicalProduct extends Product {
+export class PhysicalProduct extends Product implements DiscountableProduct {
     private weight:number; //kg
-
+    private discount:number=0;
 
     constructor(sku:string, name:string, price:number,  weight:number){
         super(sku,name,price);
         this.weight=weight;
     }
-
+applyDiscount(perccent: number): void {
+    this.discount=perccent;
+}
+getDiscountedPrice():number{
+    return this.price *(1-this.discount/100);
+}
 // getter for formatted weight
 get formattedWeight():string{
     return `${this.weight} kg`;

@@ -16,3 +16,5 @@ for (const product of Products){
     console.log(`Final Price (with tax):$${calculateTax(product)}`);
     console.log('---------------------');
 }
+Products[0].applyDiscount(10);
+console.log(`Discounted Price: $${Products[0].getDiscountedPrice()}`);
