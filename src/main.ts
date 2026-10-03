@@ -11,3 +11,8 @@ const Products=[
     new DigitalProduct('D002','Software License',99,0)
 ];
 //using a loop to display each product
+for (const product of Products){
+    console.log(product.displayDetails());
+    console.log(`Final Price (with tax):$${calculateTax(product)}`);
+    console.log('---------------------');
+}

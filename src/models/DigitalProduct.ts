@@ -16,6 +16,8 @@ export class DigitalProduct extends Product{
 
     //override displayDetail
     override displayDetails(): string {
-        return `SKU: ${this.sku}, Name:${this.name}, Price: $${this.price}, File Size: ${this.formattedFileSize}';
-    }
+        return `SKU: ${this.sku}, Name: ${this.name}, Price: $${this.price}, File Size: ${this.formattedFileSize}`;
+  }
+        
+    
 }
