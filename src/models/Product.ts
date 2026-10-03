@@ -10,10 +10,10 @@ export class Product {
   }
 
   displayDetails(): string {
-    return `SKU: \({this.sku}, Name:\){this.name}, Price: $${this.price.toFixed(2)}`;
+    return `SKU: ${this.sku}, Name: ${this.name}, Price: $${this.price}`;
   }
 
-  getPriceWithTax(taxRate: number): number {
-    return Number((this.price * (1 + taxRate)).toFixed(2));
+  getPriceWithTax(): number {
+    return this.price*1.05;
   }
 }
