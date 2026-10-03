@@ -8,7 +8,7 @@ export class PhysicalProduct extends Product {
         super(sku,name,price);
         this.weight=weight;
     }
-}
+
 // getter for formatted weight
 get formattedWeight():string{
     return `${this.weight} kg`;
@@ -16,4 +16,9 @@ get formattedWeight():string{
 //override tax calculation(10% tax)
 override getPriceWithTax():number{
     return this.price*1.10;
+}
+//override displayDetail to include weight
+override displayDetails():string{
+    return `SKU:${this.sku}, Name:${this.name}, Price: $${this.price}, Weight:${this.formattedWeight}`;
+}
 }
